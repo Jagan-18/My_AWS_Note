@@ -92,5 +92,68 @@ IAM:
  ==>An AMI (Amazon Machine Image) is essentially a pre-configured virtual machine that you can use as a template to launch EC2 (Elastic Compute Cloud) instances. AMIs can contain an operating system, application server, and pre-installed applications that you can use to quickly and easily launch an EC2 instance.
 
 
+*******
+
+RDS:
+
+==> Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud. It provides cost-efficient, resizable capacity for an industry-standard relational database and manages common database administration tasks.
+
+******
+
+#AWSLambda
+
+==> Lambda is one of the most popular AWS services. It allows you to run code without servers, and you only pay when the service is actively being used. With Lambda, you no longer have to pay for idle server time or administer, operate, and wait for servers to be built to run your applications.
+
+********
+#AWS CloudWatch
+
+Amazon CloudWatch is a monitoring service for AWS cloud resources and your AWS-based applications. Amazon CloudWatch may be used to gather and track metrics, collect and monitor log files, create alarms, and automatically respond to changes in your AWS resources. 
+
+
+ #CloudTrail
+==> AWS CloudTrail is an application program interface (API) call-recording and log-monitoring Web service offered by Amazon Web Services (AWS).
+==> AWS CloudTrail allows AWS customers to record API calls, storing them in Amazon S3 buckets. API activity data included in the service includes the identity of an API caller, the time of the API call, the source of an API caller’s IP address, parameters of the API request and the response.
+
+
+#CloudFormation:
+==> AWS CloudFormation is a service that helps users to set up their AWS resources. 
+==> So they can spend less time managing those resources and more time focusing on their applications that run in AWS.
+==> It enables developers to create and manage AWS resources in a declarative manner. 
+==> For that able use JSON or YAML file called a CloudFormation template.
+
+***********
+#AWS-Auto-Scaling:
+
+==> AWS Auto Scaling is a fully managed service, that allows you to provision and launch and terminate new instances as per demand. 
+==> It monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. 
+==> Using AWS Auto Scaling, it is easy to setup application scaling for multiple resources across multiple services in minutes.
+
+**************
+#Route 53:
+==> You can use Route 53 in the Networking and Content Delivery section in AWS Console.
+==> Route 53 is a highly available and scalable DNS web Service by Amazon.
+==> It is a scalable (DNS) service that provides a reliable way to redirect traffic to applications. To achieve this domain names are translated to IP addresses to help computers connect better.
+==> It is possible to connect queries to entities like Elastic Load Balancers in AWS using Amazon Route 53.
+
+****************
+#AWS-EKS
+
+==> EKS (Elastic Kubernetes Service) is a managed Kubernetes service provided by AWS. With EKS, you can easily deploy and manage containerized applications using Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane.
+
+**************
+#ECS:
+==> ECS (Elastic Container Service) is a fully-managed container orchestration service that Amazon Web Services (AWS) provides.
+==> It allows you to run and manage Docker containers on a cluster of virtual machines (EC2 instances) without having to manage the underlying infrastructure.
+
+
+********
+
+ #Load-Balancing:
+==> Load balancing is the distribution of workloads across multiple servers to ensure consistent and optimal resource utilization.
+==> It is an essential aspect of any large-scale and scalable computing system, as it helps you to improve the reliability and performance of your applications.
+
+
+
+
 
 

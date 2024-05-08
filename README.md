@@ -75,6 +75,7 @@ What is AWS IAM, and why is it important?
 
 ===========================================================================================
 why is it important?
+
 IAM is important because it enhances security by ensuring that only authorized individuals or entities have access to your AWS resources, helping you enforce the principle of least privilege and maintain a secure environment.
 
 ===========================================================================================

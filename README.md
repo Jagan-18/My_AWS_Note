@@ -73,12 +73,12 @@ What is AWS IAM, and why is it important?
 AWS IAM (Identity and Access Management) is a service provided by Amazon Web Services that helps you control access to your AWS resources. It allows you to manage user identities, permissions, and policies. 
 You can IAM to control who is authenticated (Signed-In) and Authorized (has Permissions) to use resources.
 
-===========================================================================================
+************************************
 why is it important?
 
 IAM is important because it enhances security by ensuring that only authorized individuals or entities have access to your AWS resources, helping you enforce the principle of least privilege and maintain a secure environment.
 
-===========================================================================================
+***********************************
 what is Authenticated and Authorization ?
 
 	Authentication confirms that users are who they say they are. 
@@ -87,7 +87,7 @@ what is Authenticated and Authorization ?
 
 
 ********
-#IAM:
+IAM:
 ********
  ==>An AMI (Amazon Machine Image) is essentially a pre-configured virtual machine that you can use as a template to launch EC2 (Elastic Compute Cloud) instances. AMIs can contain an operating system, application server, and pre-installed applications that you can use to quickly and easily launch an EC2 instance.
 

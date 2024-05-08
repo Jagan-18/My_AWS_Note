@@ -86,8 +86,9 @@ what is Authenticated and Authorization ?
 	While authentication and authorization might sound similar, they are distinct security processes in the world of identity and access management (IAM).
 
 
-
-IAM:
+********
+#IAM:
+********
  ==>An AMI (Amazon Machine Image) is essentially a pre-configured virtual machine that you can use as a template to launch EC2 (Elastic Compute Cloud) instances. AMIs can contain an operating system, application server, and pre-installed applications that you can use to quickly and easily launch an EC2 instance.
 
 

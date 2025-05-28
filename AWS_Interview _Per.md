@@ -1,7 +1,7 @@
 ## AWS
 
-## What do you understand by NACL in AWS?**
-- NACL stands for **Network Access Control List**. It’s a **stateless**, **firewall-level** security layer in AWS that controls **inbound and outbound traffic** at the **subnet level** within a VPC.
+### What do you understand by NACL in AWS?**
+NACL stands for **Network Access Control List**. It’s a **stateless**, **firewall-level** security layer in AWS that controls **inbound and outbound traffic** at the **subnet level** within a VPC.
 **Key points:**
   * It allows or denies traffic **based on rules** (IP, protocol, port).
   * **Stateless**: Unlike security groups, it doesn’t track traffic state — return traffic must be explicitly allowed.

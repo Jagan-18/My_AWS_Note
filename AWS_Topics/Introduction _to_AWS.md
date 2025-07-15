@@ -124,7 +124,7 @@ A cloud service is any service made available to users on-demand via the interne
 ---
 
 ## 📊 AWS vs Azure vs Google Cloud (Quick Snapshot)
-
+--------------------------------------------------------------------------------------------------------------------
 | Feature              | AWS                           | Azure                        | Google Cloud                |
 |----------------------|-------------------------------|------------------------------|-----------------------------|
 | Market Share         | ~32% (largest)                | ~22%                         | ~11%                        |
@@ -132,7 +132,7 @@ A cloud service is any service made available to users on-demand via the interne
 | Global Reach         | 84 AZs in 26 regions          | 60+ regions                  | 29 regions                  |
 | AI/ML Capabilities   | SageMaker, Comprehend         | Azure ML                     | Vertex AI                   |
 | Pricing Flexibility  | On-demand, reserved, spot     | Similar                      | Pay-per-second              |
-
+---------------------------------------------------------------------------------------------------------------------
 ---
 
 

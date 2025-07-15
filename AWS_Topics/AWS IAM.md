@@ -8,10 +8,10 @@
 # AWS Security: 
 AWS Security refers to a range of qualities, tools, or features that make the public cloud service provider Amazon Web Services (AWS) secure.
 There are many types of security services available but some of them are widely used by AWS, such as:
-•	IAM
-•	Key Management System (KMS)
-•	Cognito
-•	Web Access Firewall (WAF)
+1. IAM
+2. Key Management System (KMS)
+3. Cognito
+4. Web Access Firewall (WAF)
 
 ---
 # ✅ IAM (Identity and Access Management):
@@ -151,7 +151,8 @@ IAM policies define what actions are allowed or denied for a user, group, or rol
 * These are **read-only**, and updated automatically by AWS as needed.
 * Each policy has its own **ARN** (Amazon Resource Name).
 
-**Example:** `AmazonS3ReadOnlyAccess`, `AmazonEC2FullAccess`
+ **Example:** `AmazonS3ReadOnlyAccess`, `AmazonEC2FullAccess`
+
 ---
 ### 2. **Customer Managed Policies**
 

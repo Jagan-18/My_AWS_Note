@@ -14,7 +14,6 @@
 * Pay-as-you-go (billed per second or hour)
 ---
 ## 🔷 Key EC2 Concepts
-------------------------------------------------------------------------------------------------------------------
 | Component                       | Description                                                                  |
 | ------------------------------- | ---------------------------------------------------------------------------- |
 | **AMI**                         | Amazon Machine Image – template used to launch EC2 instances (OS + software) |
@@ -25,7 +24,7 @@
 | **Elastic IP**                  | A static public IP address for EC2                                           |
 | **User Data**                   | Script executed at instance launch (e.g., install packages)                  |
 | **Elastic Load Balancer (ELB)** | Distributes traffic across multiple EC2 instances                            |
-------------------------------------------------------------------------------------------------------------------
+
 ---
 
 ## 🔷 EC2 Lifecycle: End-to-End Steps:
@@ -82,14 +81,14 @@
 
 ---
 ## 🔷 EC2 Pricing Options
----------------------------------------------------------------------------------------
+
 | Option                 | Description                                                |
 | ---------------------- | ---------------------------------------------------------- |
 | **On-Demand**          | Pay per second/hour — no commitment                        |
 | **Reserved Instances** | Commit to 1–3 years — big discount                         |
 | **Spot Instances**     | Bid for unused capacity — cheapest but not always reliable |
 | **Savings Plans**      | Flexible pricing model — cheaper over time                 |
---------------------------------------------------------------------------------------
+
 ---
 
 ## 🔷 Best Practices
@@ -118,5 +117,92 @@
 5. **Set Security Group:** Specify inbound/outbound rules.
 6. **Review & Launch:** Confirm settings and launch. Download the key pair for SSH.
 ---
+
+# ✅ **EC2 Instance Types Explained (with Use Cases)**
+
+Amazon EC2 offers **different instance types** to match various workloads. Each type is optimized for specific use cases like general purpose, compute-heavy tasks, memory-intensive applications, etc.
+
+---
+## 🔷 1. **General Purpose Instances**
+**Balanced CPU, memory, and networking** — good for most everyday applications.
+
+| Instance Family | Examples                 | Use Cases                            |
+| --------------- | ------------------------ | ------------------------------------ |
+| `t` (Burstable) | `t2.micro`, `t3.small`   | Web servers, Dev/Test, microservices |
+| `m` (Balanced)  | `m5.large`, `m6i.xlarge` | Small/medium databases, app servers  |
+---
+## 🔷 2. **Compute Optimized Instances**
+**High-performance CPUs** — best for compute-intensive workloads.
+
+| Instance Family | Examples                 | Use Cases                                                                           |
+| --------------- | ------------------------ | ----------------------------------------------------------------------------------- |
+| `c`             | `c5.large`, `c6g.xlarge` | High-performance web servers, gaming servers, batch processing, scientific modeling |
+
+---
+## 🔷 3. **Memory Optimized Instances**
+
+**High memory-to-CPU ratio** — ideal for memory-hungry apps.
+
+| Instance Family | Examples                 | Use Cases                                              |
+| --------------- | ------------------------ | ------------------------------------------------------ |
+| `r`             | `r5.large`, `r6i.xlarge` | In-memory databases (Redis, Memcached), big data       |
+| `x`             | `x1e.8xlarge`            | SAP HANA, high-performance databases                   |
+| `z`             | `z1d.large`              | Electronic design automation (EDA), financial modeling |
+
+---
+## 🔷 4. **Storage Optimized Instances**
+
+**High-speed local storage (SSD/HDD)** — for I/O-heavy workloads.
+
+| Instance Family | Examples     | Use Cases                                  |
+| --------------- | ------------ | ------------------------------------------ |
+| `i`             | `i3.large`   | NoSQL databases (Cassandra, MongoDB), OLTP |
+| `d`             | `d2.xlarge`  | Data warehousing, Hadoop clusters          |
+| `h`             | `h1.2xlarge` | High-density storage, file servers         |
+
+---
+## 🔷 5. **Accelerated Computing Instances**
+
+**Use GPU or FPGA hardware** — for ML, AI, video rendering.
+
+| Instance Family | Examples      | Use Cases                                       |
+| --------------- | ------------- | ----------------------------------------------- |
+| `p`             | `p3.2xlarge`  | Deep learning, training models                  |
+| `g`             | `g4dn.xlarge` | Graphics, video processing, ML inference        |
+| `f`             | `f1.2xlarge`  | Hardware acceleration using FPGA (custom logic) |
+
+---
+## 🔷 6. **High Performance / Specialized Instances**
+
+| Instance Family | Use Case                                      |
+| --------------- | --------------------------------------------- |
+| `u`             | Ultra-high memory for SAP HANA workloads      |
+| `inf`           | High throughput inference (machine learning)  |
+| `metal`         | Bare metal access — direct access to hardware |
+
+---
+## 🧠 Tips to Choose the Right EC2 Type
+
+* For **general web apps or small workloads** → `t3.micro`, `t3.small`, `m5.large`
+* For **CPU-bound tasks** → `c6g.large`, `c5.xlarge`
+* For **RAM-heavy workloads** → `r5.xlarge`, `x1e.large`
+* For **fast local disk I/O** → `i3.large`, `d2.xlarge`
+* For **AI/ML & GPU tasks** → `g4dn`, `p3`
+---
+## ✅ Summary Table
+
+| Type              | Family        | Focus Area         | Example Use Cases                |
+| ----------------- | ------------- | ------------------ | -------------------------------- |
+| General Purpose   | `t`, `m`      | Balanced workloads | Web apps, Dev/Test               |
+| Compute Optimized | `c`           | High CPU           | Gaming, ML inference, batch jobs |
+| Memory Optimized  | `r`, `x`, `z` | High RAM           | In-memory DBs, SAP               |
+| Storage Optimized | `i`, `d`, `h` | Fast local storage | Databases, data warehousing      |
+| Accelerated Comp  | `p`, `g`, `f` | GPU/FPGA tasks     | Deep learning, rendering, AI     |
+
+---
+
+![image](https://github.com/iam-veeramalla/aws-devops-zero-to-hero/assets/43399466/fc8e083c-dba5-41a6-94b9-14ebef0255c1)
+
+
 
 

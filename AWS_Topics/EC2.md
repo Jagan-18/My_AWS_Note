@@ -68,7 +68,7 @@
 ---
 
 ## 🔷 After Launch: What Can You Do?
----------------------------------------------------------------------------------
+
 | Task                     | Description                                         |
 | ------------------------ | --------------------------------------------------- |
 | **Connect via SSH**      | Use private key to log in to Linux EC2              |
@@ -79,9 +79,8 @@
 | **Create AMI**           | Save your setup as a custom AMI for reuse           |
 | **Stop/Start/Terminate** | Manage lifecycle and billing                        |
 | **Attach Elastic IP**    | To make instance accessible with a public static IP |
----------------------------------------------------------------------------------
----
 
+---
 ## 🔷 EC2 Pricing Options
 ---------------------------------------------------------------------------------------
 | Option                 | Description                                                |

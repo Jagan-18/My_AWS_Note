@@ -25,6 +25,8 @@ Amazon Web Services (AWS) is a comprehensive cloud computing platform provided b
 ---
 # What is Cloud Service?
 A cloud service is any service made available to users on-demand via the internet from a cloud computing provider’s servers. It allows users to access computing resources like storage, software, and servers without owning or managing physical infrastructure
+
+<img width="546" height="510" alt="Image" src="https://github.com/user-attachments/assets/1b87efe6-fcc7-4120-839a-b2b8e06b9f2c" />
 --
 # What is AWS Cloud?
  AWS (Amazon Web Services) is a leading cloud computing platform developed by Amazon. It provides a wide range of on-demand cloud services such as computing power, storage, and databases.

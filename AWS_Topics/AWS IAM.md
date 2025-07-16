@@ -1,7 +1,7 @@
 # AWS IAM (Identity and Access Management)
 
-**Root user** – Account Owner that performs tasks requiring.
-**IAM** --> User within an account that performs daily tasks. 
+**Root user** – Account Owner that performs tasks requiring. (Admin)
+**IAM** --> User within an account that performs daily tasks. (Other's)
 
 # User, policies and groups and roles
 ---

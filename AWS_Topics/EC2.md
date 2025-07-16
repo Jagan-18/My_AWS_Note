@@ -6,6 +6,10 @@
 
 > 💡 Think of EC2 as a virtual computer in the cloud.
 
+- Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+- Access reliable, scalable infrastructure on demand. Scale capacity within minutes with SLA commitment of 99.99% availability.
+- Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
+- Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
 ---
 ## 🔷 Why is EC2 Important?
 * No need to buy physical servers
@@ -124,7 +128,7 @@ Amazon EC2 offers **different instance types** to match various workloads. Each 
 
 ---
 ## 🔷 1. **General Purpose Instances**
-**Balanced CPU, memory, and networking** — good for most everyday applications.
+- It is designed to deliver a balance of compute, memory, and network resources. They are suitable for a wide range of applications, including web servers, small databases, development and test environments, and more.
 
 | Instance Family | Examples                 | Use Cases                            |
 | --------------- | ------------------------ | ------------------------------------ |
@@ -132,7 +136,7 @@ Amazon EC2 offers **different instance types** to match various workloads. Each 
 | `m` (Balanced)  | `m5.large`, `m6i.xlarge` | Small/medium databases, app servers  |
 ---
 ## 🔷 2. **Compute Optimized Instances**
-**High-performance CPUs** — best for compute-intensive workloads.
+- It's provide a higher ratio of compute power to memory. They excel in workloads that require high-performance processing such as batch processing,  scientific modeling, gaming servers, and high-performance web servers.
 
 | Instance Family | Examples                 | Use Cases                                                                           |
 | --------------- | ------------------------ | ----------------------------------------------------------------------------------- |
@@ -140,8 +144,7 @@ Amazon EC2 offers **different instance types** to match various workloads. Each 
 
 ---
 ## 🔷 3. **Memory Optimized Instances**
-
-**High memory-to-CPU ratio** — ideal for memory-hungry apps.
+- This are designed to handle memory-intensive workloads. They are suitable for applications that require large amounts of memory, such as in-memory databases, real-time big data analytics, and high-performance computing.
 
 | Instance Family | Examples                 | Use Cases                                              |
 | --------------- | ------------------------ | ------------------------------------------------------ |
@@ -151,8 +154,7 @@ Amazon EC2 offers **different instance types** to match various workloads. Each 
 
 ---
 ## 🔷 4. **Storage Optimized Instances**
-
-**High-speed local storage (SSD/HDD)** — for I/O-heavy workloads.
+- It are optimized for applications that require high, sequential read and write access to large datasets.  They are ideal for tasks like data warehousing, log processing, and distributed file systems.
 
 | Instance Family | Examples     | Use Cases                                  |
 | --------------- | ------------ | ------------------------------------------ |
@@ -162,8 +164,8 @@ Amazon EC2 offers **different instance types** to match various workloads. Each 
 
 ---
 ## 🔷 5. **Accelerated Computing Instances**
-
-**Use GPU or FPGA hardware** — for ML, AI, video rendering.
+- Accelerated Computing Instances typically come with one or more types of accelerators, such as Graphics Processing Units (GPUs), Field Programmable Gate Arrays (FPGAs), or custom Application Specific Integrated Circuits (ASICs). 
+- These accelerators offload computationally intensive tasks from the main CPU, enabling faster and more efficient processing for specific workloads.
 
 | Instance Family | Examples      | Use Cases                                       |
 | --------------- | ------------- | ----------------------------------------------- |
@@ -279,6 +281,90 @@ After the dot (`.`), the size defines the **amount of vCPU and memory**:
 * **`n` = high-speed network**, **`d` = local disks**, **`z` = high GHz cores**
 
 ---
+# ✅ How to Connect to an EC2 Instance via SSH (Linux/Mac/WSL)
+
+#### 🔷 Prerequisites:
+----------------------
+1. ✅ You launched a **Linux-based EC2 instance**
+2. ✅ You have the **`.pem` key pair file** (private key) you selected at launch
+3. ✅ The instance has a **public IP** or **Elastic IP**
+4. ✅ The **Security Group** allows inbound **SSH traffic on port 22**
+5. ✅ You’re using a terminal (Mac/Linux/WSL) or Git Bash (Windows)
+
+---
+# 🔷 Step-by-Step Instructions:
+### ✅ Step 1: Locate the Public IP of Your Instance
+
+* Go to **EC2 Dashboard → Instances**
+* Copy the **Public IPv4 address**
+---
+### ✅ Step 2: Open Your Terminal
+
+Go to your terminal or Git Bash.
+---
+### ✅ Step 3: Navigate to the Directory Containing Your `.pem` File
+
+```bash
+cd /path/to/your/keypair/
+```
+---
+### ✅ Step 4: Set Permissions on the `.pem` File
+```bash
+chmod 400 your-key-name.pem
+```
+> This ensures the private key is **readable only by you** (required by SSH).
+
+---
+### ✅ Step 5: Connect Using SSH
+
+Use the following command to connect:
+
+```bash
+ssh -i your-key-name.pem ec2-user@<public-ip>
+```
+### 🔹 Example:
+
+```bash
+ssh -i mykey.pem ec2-user@3.110.45.123
+```
+
+> 💡 Replace `ec2-user` with the correct **default username** based on the AMI:
+
+| AMI                 | Default SSH Username |
+| ------------------- | -------------------- |
+| Amazon Linux / RHEL | `ec2-user`           |
+| Ubuntu              | `ubuntu`             |
+| CentOS              | `centos`             |
+| Debian              | `admin` or `debian`  |
+| SUSE                | `ec2-user`           |
+
+---
+## ✅ Common SSH Errors and Fixes:
+
+| Error                          | Fix                                           |
+| ------------------------------ | --------------------------------------------- |
+| `Permission denied`            | Wrong username or key                         |
+| `Timeout` or No response       | Check Security Group (port 22 open?)          |
+| `Unprotected private key file` | Run `chmod 400 your-key.pem`                  |
+| `Host key verification failed` | Run `ssh-keygen -R <IP>` to clear known hosts |
+
+---
+## ✅ Optional (for Windows users):
+
+* Use **Git Bash**, **Windows Terminal**, or **PuTTY**
+* If using PuTTY, convert `.pem` to `.ppk` using PuTTYgen
+---
+## ✅ Summary:
+1. Make sure port 22 is open in the **security group**
+2. Use the right **username** and **`.pem`** file
+3. SSH command:
+
+```bash
+ssh -i your-key.pem ec2-user@your-public-ip
+```
+---
+
+
 
 
 

@@ -40,6 +40,8 @@ A cloud service is any service made available to users on-demand via the interne
 3. Cloud computing is a pay-as-you-go model for delivering IT resources.
 4. It is the delivery of computing services-servers, storage, databases, networking, software, analytics and  more-over the internet.
 
+<img width="609" height="346" alt="Image" src="https://github.com/user-attachments/assets/48ff7623-e452-4fae-8343-e7e955b3a1c9" />
+
 **There are basically 3 categories in cloud computing:**
 1. **SaaS (Software as a Service):** It allows companies to use software without having to purchase them, which reduces the expenditure of the company drastically, since they are already installed on the cloud server they can be quickly deployed and therefore saves time.
 2. **PaaS (Platform as a Service):** It allows developers to build applications, collaborate on projects without having to purchase or maintain infrastructure.
@@ -72,6 +74,8 @@ A cloud service is any service made available to users on-demand via the interne
    * Cloud providers offer **high uptime, redundancy, and global presence**.
 
 ---
+
+<img width="696" height="446" alt="Image" src="https://github.com/user-attachments/assets/10dda92b-257f-4ce0-8a2a-955c92d601ce" />
 
 # ✅ **Public Cloud vs Private Cloud: Key Differences:**
 --------------------------------------------------------

@@ -253,9 +253,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
                           │
                           └── Route Tables control traffic flow
 ```
----
 ## 🧪 Real-world Use Case:
---------------------------
 ### Scenario: Hosting a Secure Web Application
 
 1. **Frontend** (React app, Nginx) is deployed in a **Public Subnet** with a public IP.
@@ -263,12 +261,10 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 3. **Database** (RDS, MongoDB, etc.) lives in the **Private Subnet** with no internet access.
 4. A **NAT Gateway** in the Public Subnet allows backend/API servers to pull updates from the internet.
 5. **Security Groups** and **NACLs** restrict traffic to allow only necessary communication.
-
 ✅ This setup ensures high security and separation of concerns.
 
 ---
 ## 🛠️ Steps to Create a Custom VPC from AWS Console:
---------------------------------------------------
 ### Step-by-Step Guide:
 1. **Login to AWS Console** → Go to **VPC Dashboard**
 2. Click **"Create VPC"**

@@ -97,7 +97,6 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 ---
 ## 🧱 Public vs Private Subnet:
--------------------------------
 | Type        | Description                                                                                                                         |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Public**  | Subnet associated with a route to an Internet Gateway (IGW). Resources (like EC2) in this subnet can be accessed from the internet. |
@@ -121,18 +120,27 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 •  10.0.0.255- broadcast address
 
-# Note: AWS do not support broadcast in a VPC but reserve this address.
+### Note: AWS do not support broadcast in a VPC but reserve this address.
 ---
 # Routing and Routing Table:
 1. Use route tables to determine where network traffic from your subnet or gateway is directed.
+   
 2.A Route table contains a set of rules, called routes, that are used to determine where the data packets of the network traffic are directed. 
+
   •  It is the central routing function.
+
   •  It connects the different AZ together and connects the VPC to the internet gateway.
+  
   •  You can have up to 200 route tables per VPC.
+  
   •  You can have up to 50 routes entries per route table.
+  
   •  Each subnet must be associated with only one route table at any given time only.
+  
   •  If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
+  
   •  You can also edit the main route table if you need but you cannot delete the main route table.
+
 ---
 # Internet Gateway: ----> It will give public access and internet.
 <img>

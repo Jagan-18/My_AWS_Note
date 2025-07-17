@@ -1,4 +1,4 @@
-<img width="859" height="398" alt="image" src="https://github.com/user-attachments/assets/c8d07c6c-379e-41fc-b582-2956c0044b6d" /># AWS VPC
+# AWS VPC
 ---------
 ## 🔵 What is a VPC (Virtual Private Cloud)?
 1. A virtual private cloud is a virtual network that closely resembles a traditional networking that you operate in your own data centre, with the benefits of using the scalable infrastructure of AWS.
@@ -38,8 +38,7 @@
 6. Virtual Private Gateway
 7. Peering Connectors
 8. Elastic IP
-<img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" />
-<img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
+<img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" /> <img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
 <img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
 
 ---

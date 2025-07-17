@@ -71,6 +71,10 @@
 # What is CIDR? - All IP address is private only.
 > **Classless Inter-Domain Routing (CIDR) is an IP address allocation method that improves data routing efficiency on the internet. Every machine, server, and end-user device that connects to the internet has a unique number, called an IP address, associated with it**. Devices find and communicate with one another by using these IP addresses. Organizations use CIDR to allocate IP addresses flexibly and efficiently in their networks.
 <img width="750" height="488" alt="Image" src="https://github.com/user-attachments/assets/d40516f5-a47f-4efa-843a-568aea67b60e" />
+<img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
+<img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
+<img width="755" height="552" alt="Image" src="https://github.com/user-attachments/assets/e5aa8796-deed-42d6-aea4-f707c025ac68" />
+<img width="819" height="391" alt="Image" src="https://github.com/user-attachments/assets/914b79e1-7d49-414e-9585-93bd1048111b" />
 ---
 
 # IP- Address:

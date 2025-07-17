@@ -364,45 +364,47 @@ ssh -i your-key.pem ec2-user@your-public-ip
 ```
 ---
 ---
-# Explain Auto Scaling in EC2 and how it helps ensure application availability.
+## Explain Auto Scaling in EC2 and how it helps ensure application availability.
 - Auto Scaling is a service that allows you to automatically adjust the number of EC2 instances in response to changing application demands. 
 - It helps maintain application availability, improves fault tolerance, and optimizes resource usage by scaling out during periods of high demand and scaling in during lower demand.
 
-# Explain the differences between on-demand, reserved, and spot instances. (OR) what are the EC2 Purchasing Options?
-1.	On-Demand Instances: Pay-as-you-go pricing with no upfront commitment.
-2.	Reserved Instances: Provides capacity reservation at a lower cost in exchange for a commitment.
-3.	Spot Instances: Allows users to bid on unused EC2 capacity, potentially leading to significantly lower costs.
+## Explain the differences between on-demand, reserved, and spot instances. (OR) what are the EC2 Purchasing Options?
+1.	**On-Demand Instances:** Pay-as-you-go pricing with no upfront commitment.
+2.	**Reserved Instances:** Provides capacity reservation at a lower cost in exchange for a commitment.
+3.	**Spot Instances:** Allows users to bid on unused EC2 capacity, potentially leading to significantly lower costs.
 
 
-# Explain the difference between public IP and Elastic IP in EC2.
-1. A public IP is assigned to an instance at launch, but it can change if the instance is stopped and started. 
-2. An Elastic IP is a static IP address that can be associated with an instance, providing a consistent public IP even after stopping and starting the instance.
+## Explain the difference between public IP and Elastic IP in EC2.
+1. A **public IP** is assigned to an instance at launch, but it can change if the instance is stopped and started. 
+2. An **Elastic IP** is a static IP address that can be associated with an instance, providing a consistent public IP even after stopping and starting the instance.
 
-# AMAZON EC2 AUTO-SCALING: 
+## AMAZON EC2 AUTO-SCALING: 
 1. Amazon EC2 Auto Scaling enables you to automatically add or remove Amazon EC2 instances across different AZs in response to changing application demand.
-  •  Dynamic scaling responds to changing demand. 
-  •	 Predictive scaling automatically schedules the right number of Amazon EC2 instances based on predicted demand.
-
+  •  **Dynamic scaling** responds to changing demand. 
+  •	 **Predictive scaling** automatically schedules the right number of Amazon EC2 instances based on predicted demand.
 2. To scale faster, you can use dynamic scaling and predictive scaling together.
 3. By adding Amazon EC2 Auto Scaling to an application, you can add new instances to the application when necessary and terminate them when no longer needed.
- 
+ <img width="403" height="365" alt="Image" src="https://github.com/user-attachments/assets/1ccd0b81-6452-48e5-87ab-cb4d09527a38" />
 
 4. If you do not specify the desired number of Amazon EC2 instances in an Auto Scaling group, the desired capacity defaults to your minimum capacity.
       Max = up to 4 EC2 instances
 
 ---
-# What is Dedicated host in Aws?
+## What is Dedicated host in Aws?
+<img width="940" height="142" alt="Image" src="https://github.com/user-attachments/assets/3d30327a-9baa-42f9-a585-71b6ea2627cf" />
 
 ---
-# what are key-pair in aws?
-1. A key pair is a combination of a public key that is used to encrypt data and a private key that is used to decrypt data.
+<img width="561" height="455" alt="Image" src="https://github.com/user-attachments/assets/22040214-3df3-4e85-85e7-145da2f20ebd" />
+
+## what are key-pair in aws?
+1. A key pair is a combination of a public key that is used to **encrypt data** and a private key that is used to **decrypt data**.
 2. A key pair is a set of cryptographic keys that consists of a public key and a private key. Key pairs are primarily used for secure authentication and access to Amazon Elastic Compute Cloud (Amazon EC2) instances.
 3. When you create an EC2 instance, you can associate a key pair with it. The public key is placed on the instance, and the private key is kept securely by the user. When you want to connect to the instance, you use the private key to authenticate, ensuring secure access to your virtual server. 
 4. Key pairs are crucial for securing access to EC2 instances and are an essential component of AWS's security infrastructure.
 ---
-# Explain the concept of EC2 instance metadata and user data.
-1. **EC2 Instance Metadata:** EC2 instances have metadata that provides information about the instance, such as instance ID, public IP address, and IAM role. This metadata can be accessed from within the instance. 
-2. **User Data:** User data is a script or data that can be passed to an EC2 instance during launch. It is often used to perform instance-specific configuration and customization.
+## Explain the concept of EC2 instance metadata and user data.
+1. **EC2 Instance Metadata:** EC2 instances have metadata that provides information about the instance, such as instance ID, public IP address, and IAM role. This metadata can be **accessed from within the instance.** 
+2. **User Data:** User data is a script or data that can be **passed to an EC2 instance during launch.** It is often used to perform instance-specific configuration and customization.
 ---
 
 

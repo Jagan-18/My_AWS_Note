@@ -10,9 +10,7 @@
 7. Once the VPC is created you cannot change its CIDR block range.
 8. If you need a different CIDR size create a new VPC.
 9. The different subnets within a VPC cannot overlap.
-
-<img>
-
+<img width="513" height="540" alt="Image" src="https://github.com/user-attachments/assets/7e9f2745-3da1-4b4e-a468-065d1f2a20b9" />
 ### Using VPC, you can define:
 * IP address ranges (using **CIDR** blocks)
 * Subnets (public & private)

@@ -39,7 +39,7 @@
 7. Peering Connectors
 8. Elastic IP
    
-<img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" />
+      <img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" />
 
 ---
 ## 🔸 Why is VPC Important?
@@ -70,11 +70,11 @@
 
 # What is CIDR? - All IP address is private only.
 > **Classless Inter-Domain Routing (CIDR) is an IP address allocation method that improves data routing efficiency on the internet. Every machine, server, and end-user device that connects to the internet has a unique number, called an IP address, associated with it**. Devices find and communicate with one another by using these IP addresses. Organizations use CIDR to allocate IP addresses flexibly and efficiently in their networks.
-<img width="750" height="488" alt="Image" src="https://github.com/user-attachments/assets/d40516f5-a47f-4efa-843a-568aea67b60e" />
-<img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
-<img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
-<img width="755" height="552" alt="Image" src="https://github.com/user-attachments/assets/e5aa8796-deed-42d6-aea4-f707c025ac68" />
-<img width="819" height="391" alt="Image" src="https://github.com/user-attachments/assets/914b79e1-7d49-414e-9585-93bd1048111b" />
+  <img width="750" height="488" alt="Image" src="https://github.com/user-attachments/assets/d40516f5-a47f-4efa-843a-568aea67b60e" />
+  <img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
+  <img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
+  <img width="755" height="552" alt="Image" src="https://github.com/user-attachments/assets/e5aa8796-deed-42d6-aea4-f707c025ac68" />
+  <img width="819" height="391" alt="Image" src="https://github.com/user-attachments/assets/914b79e1-7d49-414e-9585-93bd1048111b" />
 
 ---
 # IP- Address:
@@ -93,7 +93,7 @@ You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets. You c
 # Sub-Net:
 A subnet is a range of IP addresses in your VPC. A subnet must reside in a single Availability Zone. After you add subnets, you can deploy AWS resources in your VPC.
 
-<img width="529" height="349" alt="Image" src="https://github.com/user-attachments/assets/e5ee22a9-8f75-4489-985a-bc4929b9efad" />
+  <img width="529" height="349" alt="Image" src="https://github.com/user-attachments/assets/e5ee22a9-8f75-4489-985a-bc4929b9efad" />
 
 ---
 ## 🧱 Public vs Private Subnet:
@@ -143,7 +143,7 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 ---
 # Internet Gateway: ----> It will give public access and internet.
-<img width="776" height="496" alt="Image" src="https://github.com/user-attachments/assets/92bf17b7-b6e6-4bb9-92ee-f711bca4f02f" />
+  <img width="776" height="496" alt="Image" src="https://github.com/user-attachments/assets/92bf17b7-b6e6-4bb9-92ee-f711bca4f02f" />
 
 1. An internet Gateway (IGW) is a logical connection between an Amazon VPC and the internet. It is not a physical device. Only one can be associated with each VPC. It does not limit the bandwidth of internet connectivity.
 
@@ -202,7 +202,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 2.	Instances in either VPC can communicate with each other as if they are within the same network. 
 3.	You can create a VPC peering connection between your own VPC or with a VPC in another AWS account. The VPC can be in different region.
    
-<img width="781" height="301" alt="Image" src="https://github.com/user-attachments/assets/24dac63a-4958-4861-87ba-96f53dfe5581" />
+  <img width="781" height="301" alt="Image" src="https://github.com/user-attachments/assets/24dac63a-4958-4861-87ba-96f53dfe5581" />
 
 ---
 # VPC Endpoint:

@@ -169,11 +169,15 @@ NAT Gateway service can use a NAT gateway so that instances in a private subnet 
 
 # Security group:
 A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Both inbound and outbound rules control the flow of traffic to and traffic from your instance, respectively, Security groups allow you to define rules that permit or restrict traffic based on protocols, ports, and IP addresses.  
-   • It is a virtual firewall works at ENI level.
-   • Up to 5 security groups per EC2 instance interface can be applied.
-   • Can only have permit rules, cannot have deny rules.
-   • Stateful, return traffic of allowed inbound traffic is allowed even if there are no rules to allow it.
 
+   • It is a virtual firewall works at ENI level.
+
+   • Up to 5 security groups per EC2 instance interface can be applied.
+   
+   • Can only have permit rules, cannot have deny rules.
+   
+   • Stateful, return traffic of allowed inbound traffic is allowed even if there are no rules to allow it.
+   
 ---
 # Network Access Control Lists (NACLs):
 1.	It is a function performed on the implied router.

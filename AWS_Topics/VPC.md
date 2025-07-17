@@ -38,8 +38,8 @@
 6. Virtual Private Gateway
 7. Peering Connectors
 8. Elastic IP
-<img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" /> <img width="998" height="423" alt="Image" src="https://github.com/user-attachments/assets/3ca0205b-7d24-4c35-8993-300da7bdfbfe" />
-<img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
+   
+<img width="859" height="398" alt="Image" src="https://github.com/user-attachments/assets/bf64fe21-bfbd-4622-a8fb-da7bacfd3ffe" />
 
 ---
 ## 🔸 Why is VPC Important?
@@ -76,7 +76,7 @@
 # IP- Address:
 You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets. You can also bring your public IPv4 and IPv6 GUA addresses to AWS and allocate them to resources in your VPC, such as EC2 instances, NAT gateways, and Network Load Balancers.
 
-<img>
+<img width="673" height="328" alt="Image" src="https://github.com/user-attachments/assets/641a364f-6ef9-42aa-bf22-2e5212b50e67" />
 
 ### What is IP?
  > IP stands for Internet Protocol, a set of rules governing how devices on a network communicate with one another.

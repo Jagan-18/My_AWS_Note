@@ -75,11 +75,10 @@
 <img width="648" height="691" alt="Image" src="https://github.com/user-attachments/assets/0a697f3a-5e2d-44da-abbf-061b8d0c3113" />
 <img width="755" height="552" alt="Image" src="https://github.com/user-attachments/assets/e5aa8796-deed-42d6-aea4-f707c025ac68" />
 <img width="819" height="391" alt="Image" src="https://github.com/user-attachments/assets/914b79e1-7d49-414e-9585-93bd1048111b" />
----
 
+---
 # IP- Address:
 You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets. You can also bring your public IPv4 and IPv6 GUA addresses to AWS and allocate them to resources in your VPC, such as EC2 instances, NAT gateways, and Network Load Balancers.
-
 <img width="673" height="328" alt="Image" src="https://github.com/user-attachments/assets/641a364f-6ef9-42aa-bf22-2e5212b50e67" />
 
 ### What is IP?
@@ -90,16 +89,14 @@ You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets. You c
 
 ### What is IPv6?
 > IP version 6 is the new version of Internet Protocol, which is way better than IP version 4 in terms of complexity and efficiency. IPv6 is written as a group of 8 hexadecimal numbers separated by colon (:). It can be written as 128 bits of 0s and 1s.
-
 ---
-
 # Sub-Net:
 A subnet is a range of IP addresses in your VPC. A subnet must reside in a single Availability Zone. After you add subnets, you can deploy AWS resources in your VPC.
-<img>
----
+<img width="529" height="349" alt="Image" src="https://github.com/user-attachments/assets/e5ee22a9-8f75-4489-985a-bc4929b9efad" />
 
+---
 ## 🧱 Public vs Private Subnet:
-------------------------------
+-------------------------------
 | Type        | Description                                                                                                                         |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | **Public**  | Subnet associated with a route to an Internet Gateway (IGW). Resources (like EC2) in this subnet can be accessed from the internet. |
@@ -107,7 +104,6 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 # Public Subnet:
 - **If a subnet’s traffic is routed to an internet gateway, the subnet is known as public subnet.** If you want your instance in a public subnet to communicate with the internet over IPV4, it must have a public IPV4 address or an Elastic IP address.
- 
 # Private Subnet: 
 - **If a subnet doesn’t have a route to the internet gateway, the subnet is known as private subnet.** When you create a VPC you must specify an IPV4 CIDR block for the VPC. The allowed blocks size is between /16 to /28 networks. The first four and last IP address of subnet cannot be assigned.
 
@@ -123,16 +119,14 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 ---
 # Routing and Routing Table:
 1. Use route tables to determine where network traffic from your subnet or gateway is directed.
-
 2.A Route table contains a set of rules, called routes, that are used to determine where the data packets of the network traffic are directed. 
-  • It is the central routing function.
-  •	It connects the different AZ together and connects the VPC to the internet gateway.
-  •	You can have up to 200 route tables per VPC.
-  •	You can have up to 50 routes entries per route table.
-  • Each subnet must be associated with only one route table at any given time only.
-  •	If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
-  •	You can also edit the main route table if you need but you cannot delete the main route table.
-
+  •  It is the central routing function.
+  •  It connects the different AZ together and connects the VPC to the internet gateway.
+  •  You can have up to 200 route tables per VPC.
+  •  You can have up to 50 routes entries per route table.
+  •  Each subnet must be associated with only one route table at any given time only.
+  •  If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
+  •  You can also edit the main route table if you need but you cannot delete the main route table.
 ---
 # Internet Gateway: ----> It will give public access and internet.
 <img>

@@ -112,13 +112,13 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 **For e.g: 10.0.0.0- network address:**
 
-•  10.0.0.1- reserved by AWS for the VPC router.
+  •  10.0.0.1- reserved by AWS for the VPC router.
 
-•  10.0.0.2- reserved by AWS the IP address of DNS server.
+  •  10.0.0.2- reserved by AWS the IP address of DNS server.
 
-•  10.0.0.3- reserved for future use.
+  •  10.0.0.3- reserved for future use.
 
-•  10.0.0.255- broadcast address
+  •  10.0.0.255- broadcast address
 
 ### Note: AWS do not support broadcast in a VPC but reserve this address.
 ---
@@ -143,14 +143,16 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 ---
 # Internet Gateway: ----> It will give public access and internet.
-<img>
+<img width="776" height="496" alt="Image" src="https://github.com/user-attachments/assets/92bf17b7-b6e6-4bb9-92ee-f711bca4f02f" />
 
 1. An internet Gateway (IGW) is a logical connection between an Amazon VPC and the internet. It is not a physical device. Only one can be associated with each VPC. It does not limit the bandwidth of internet connectivity.
+
 2. Ensure that your subnet’s route table points to the internet gateway.
+
 3. It performs NAT between your private and public IPV4 address.
+
 4. It supports both IPV4 and IPV6.
 ---
-
 # NAT Gateway:
 NAT Gateway is a highly available AWS managed service that makes it easy to connect to the Internet from instances within a private subnet in an Amazon Virtual Private Cloud (Amazon VPC). Previously, you needed to launch a NAT instance to enable NAT for instances in a private subnet.
 
@@ -195,8 +197,9 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 1.	A VPC peering connection is a network connection between two VPC that enables you to route traffic between them using private IPV4 addresses or IPV6 addresses. 
 2.	Instances in either VPC can communicate with each other as if they are within the same network. 
 3.	You can create a VPC peering connection between your own VPC or with a VPC in another AWS account. The VPC can be in different region.
+   
+<img width="781" height="301" alt="Image" src="https://github.com/user-attachments/assets/24dac63a-4958-4861-87ba-96f53dfe5581" />
 
-<img>
 ---
 # VPC Endpoint:
 > A VPC endpoint enables you to privately connect your VPC to supported AWS services, instances in your VPC do not require public IP address to communicate with resources in the service. Endpoints are virtual devices.
@@ -246,9 +249,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
                           │
                           └── Route Tables control traffic flow
 ```
-
 ---
-
 ## 🧪 Real-world Use Case:
 --------------------------
 ### Scenario: Hosting a Secure Web Application
@@ -267,7 +268,6 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 ### Step-by-Step Guide:
 1. **Login to AWS Console** → Go to **VPC Dashboard**
 2. Click **"Create VPC"**
-
    * Name: `MyVPC`
    * IPv4 CIDR block: `10.0.0.0/16`
    * Leave default for others
@@ -278,27 +278,22 @@ A security group acts as a virtual firewall for your EC2 instances to control in
    * `PrivateSubnet` → `10.0.2.0/24`
 
 4. **Create Internet Gateway (IGW)**:
-
    * Attach IGW to your VPC
 
 5. **Create Route Table for Public Subnet**:
-
    * Add route: `0.0.0.0/0` → IGW
    * Associate this route table with `PublicSubnet`
 
 6. **Create NAT Gateway (Optional for private subnet)**:
-
    * Place it in the `PublicSubnet`
    * Allocate an Elastic IP
    * Attach it to a route table for the `PrivateSubnet`
 
 7. **Launch EC2 Instances**:
-
    * In PublicSubnet (with public IP)
    * In PrivateSubnet (no public IP)
 
 8. **Set Security Groups**:
-
    * Allow SSH (port 22) or HTTP/HTTPS for public EC2
    * Restrict private EC2 to allow only internal traffic
 ---
@@ -307,7 +302,6 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 * You can split your VPC into **public and private subnets** for isolation and security.
 * Use **Internet Gateway** and **NAT Gateway** for controlled internet access.
 * Everything is **customizable**: IPs, routing, firewall rules, and connections.
-
 ---
 # Name and explain some security products and features available in VPC?
 1. **Security groups** - This goes about as a firewall for the EC2 examples, controlling inbound and outbound traffic at the case level.
@@ -322,5 +316,5 @@ You can use the following tools to monitor traffic or network access in your vir
  4. Reachability Analyzer
  5. Network Access Analyzer
  6. CloudTrail logs
-
+---
 

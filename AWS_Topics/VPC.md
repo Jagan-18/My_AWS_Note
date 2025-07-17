@@ -92,6 +92,7 @@ You can assign IP addresses, both IPv4 and IPv6, to your VPCs and subnets. You c
 ---
 # Sub-Net:
 A subnet is a range of IP addresses in your VPC. A subnet must reside in a single Availability Zone. After you add subnets, you can deploy AWS resources in your VPC.
+
 <img width="529" height="349" alt="Image" src="https://github.com/user-attachments/assets/e5ee22a9-8f75-4489-985a-bc4929b9efad" />
 
 ---
@@ -104,15 +105,20 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 # Public Subnet:
 - **If a subnet’s traffic is routed to an internet gateway, the subnet is known as public subnet.** If you want your instance in a public subnet to communicate with the internet over IPV4, it must have a public IPV4 address or an Elastic IP address.
+
 # Private Subnet: 
 - **If a subnet doesn’t have a route to the internet gateway, the subnet is known as private subnet.** When you create a VPC you must specify an IPV4 CIDR block for the VPC. The allowed blocks size is between /16 to /28 networks. The first four and last IP address of subnet cannot be assigned.
 
 - The instances in the public subnet can send outbound traffic directly to the internet, but instances in private subnet can’t.
 
 **For e.g: 10.0.0.0- network address:**
+
 •  10.0.0.1- reserved by AWS for the VPC router.
+
 •  10.0.0.2- reserved by AWS the IP address of DNS server.
+
 •  10.0.0.3- reserved for future use.
+
 •  10.0.0.255- broadcast address
 
 # Note: AWS do not support broadcast in a VPC but reserve this address.

@@ -113,27 +113,29 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 - The instances in the public subnet can send outbound traffic directly to the internet, but instances in private subnet can’t.
 
 **For e.g: 10.0.0.0- network address:**
-10.0.0.1- reserved by AWS for the VPC router.
-10.0.0.2- reserved by AWS the IP address of DNS server.
-10.0.0.3- reserved for future use.
-10.0.0.255- broadcast address
+•  10.0.0.1- reserved by AWS for the VPC router.
+•  10.0.0.2- reserved by AWS the IP address of DNS server.
+•  10.0.0.3- reserved for future use.
+•  10.0.0.255- broadcast address
 
 # Note: AWS do not support broadcast in a VPC but reserve this address.
 ---
 # Routing and Routing Table:
 1. Use route tables to determine where network traffic from your subnet or gateway is directed.
+
 2.A Route table contains a set of rules, called routes, that are used to determine where the data packets of the network traffic are directed. 
-  •  It is the central routing function.
-  •	 It connects the different AZ together and connects the VPC to the internet gateway.
-  •	 You can have up to 200 route tables per VPC.
-  •	 You can have up to 50 routes entries per route table.
-  •  Each subnet must be associated with only one route table at any given time only.
-  •	 If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
-  •	 You can also edit the main route table if you need but you cannot delete the main route table.
+  • It is the central routing function.
+  •	It connects the different AZ together and connects the VPC to the internet gateway.
+  •	You can have up to 200 route tables per VPC.
+  •	You can have up to 50 routes entries per route table.
+  • Each subnet must be associated with only one route table at any given time only.
+  •	If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
+  •	You can also edit the main route table if you need but you cannot delete the main route table.
 
 ---
 # Internet Gateway: ----> It will give public access and internet.
 <img>
+
 1. An internet Gateway (IGW) is a logical connection between an Amazon VPC and the internet. It is not a physical device. Only one can be associated with each VPC. It does not limit the bandwidth of internet connectivity.
 2. Ensure that your subnet’s route table points to the internet gateway.
 3. It performs NAT between your private and public IPV4 address.
@@ -142,9 +144,10 @@ A subnet is a range of IP addresses in your VPC. A subnet must reside in a singl
 
 # NAT Gateway:
 NAT Gateway is a highly available AWS managed service that makes it easy to connect to the Internet from instances within a private subnet in an Amazon Virtual Private Cloud (Amazon VPC). Previously, you needed to launch a NAT instance to enable NAT for instances in a private subnet.
-               (OR)
-NAT Gateway service can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC, but external services cannot initiate a connection with those instances.
 
+               **(OR)**
+
+NAT Gateway service can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC, but external services cannot initiate a connection with those instances.
     • No need to assign public IP address to your private instance.
 	• After you have created a NAT gateway you must update the route table associated with one or more of your private subnets to point internet bound traffic to the NAT gateway.This enables instances in your private subnet to communicate with the internet.
 	• Deleting a NAT gateway, disassociates its elastic IP address, but does not release the address from your account.
@@ -155,13 +158,12 @@ NAT Gateway service can use a NAT gateway so that instances in a private subnet 
 
 # Security group:
 A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Both inbound and outbound rules control the flow of traffic to and traffic from your instance, respectively, Security groups allow you to define rules that permit or restrict traffic based on protocols, ports, and IP addresses.  
-   •	It is a virtual firewall works at ENI level.
-   •	Up to 5 security groups per EC2 instance interface can be applied.
-   •	Can only have permit rules, cannot have deny rules.
-   •	Stateful, return traffic of allowed inbound traffic is allowed even if there are no rules to allow it.
+   • It is a virtual firewall works at ENI level.
+   • Up to 5 security groups per EC2 instance interface can be applied.
+   • Can only have permit rules, cannot have deny rules.
+   • Stateful, return traffic of allowed inbound traffic is allowed even if there are no rules to allow it.
 
 ---
-
 # Network Access Control Lists (NACLs):
 1.	It is a function performed on the implied router.
 2.	NACL is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.

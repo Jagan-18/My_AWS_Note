@@ -10,18 +10,17 @@
 A Security Group (SG) acts as a **virtual firewall** for **EC2 instances** (and other services like RDS or Lambda). It **controls inbound and outbound traffic at the instance level**.
 - AWS Security is always a shared responsibility.
 
-<img>
-
+<img width="927" height="398" alt="Image" src="https://github.com/user-attachments/assets/d1459297-69d6-41c7-968d-bf9701ff2325" />
 - Security Groups operate at the instance level and control traffic to and from individual EC2 instances.
 - Scope of application: Security Groups apply to individual instances.
 - NACLs operate at the subnet level and control traffic in and out of a VPC.
 - Scope of application: NACLs apply to all instances in a subnet.
 
+<img width="550" height="671" alt="Image" src="https://github.com/user-attachments/assets/b68ba4ba-9066-47ab-89c4-5734de678da6" />
 **Security group basically there two things **
 1.	Inbound Traffic.
 2.	Out bound Traffic.
-
-<img>
+<img width="603" height="325" alt="Image" src="https://github.com/user-attachments/assets/a7e3269f-e010-4761-af58-5771342ced6f" />
 
 Inbound rules control the incoming traffic to your instance.
 **(OR)**
@@ -32,8 +31,6 @@ outbound rules control the outgoing traffic from your instance. When you launch 
 --------> Outbound traffic refers to traffic that originates from inside your own network. 
 # NACL’s
 NACL basically the primary purpose is you can deny what kind of traffic that you would want and to you can allow what kind of traffic you want.
-
-<img>
 
 ---
 
@@ -61,21 +58,18 @@ NACL basically the primary purpose is you can deny what kind of traffic that you
 A NACL is a **stateless firewall** applied at the **subnet level**. It controls traffic entering and leaving a subnet.
 
 **Key Features:**
-
 * **Stateless:** Inbound and outbound rules are managed separately.
 * Supports both **Allow** and **Deny** rules.
 * Rules are evaluated in **order of rule number (lowest to highest)**.
 * Applies to **all resources** within the subnet.
 
 **Use Case:**
-
 ```plaintext
 - Deny all traffic from a specific malicious IP address range
 - Allow only HTTP/HTTPS traffic to your web subnet
 ```
 
 **How to implement:**
-
 1. Go to **VPC Dashboard** → **Network ACLs**
 2. Create or modify a NACL
 3. Add **inbound and outbound rules**
@@ -87,14 +81,12 @@ A NACL is a **stateless firewall** applied at the **subnet level**. It controls 
 IAM Policies define **who can do what** on AWS. They are used to manage **user and service permissions** at a very granular level.
 
 **Key Features:**
-
 * Written in **JSON**
 * Can be attached to **users**, **groups**, or **roles**
 * Supports **Allow** and **Deny**
 * Can restrict access to **specific resources**, **actions**, **conditions**
 
 **Use Case:**
-
 ```json
 {
   "Effect": "Allow",
@@ -142,6 +134,7 @@ IAM Policies define **who can do what** on AWS. They are used to manage **user a
 | **Applies To**            | Attached to network interfaces/instances           | Attached to subnets (affects all in subnet)        |
 | **Rule Evaluation**       | Evaluates all rules                                | Evaluates rules in order, stops at first match     |
 | **Default Behavior**      | Denies inbound, allows outbound by default         | Allows all by default (default NACL); custom NACLs deny by default unless rules are added |
+
 --
 ### 🧠 In Simple Terms:
 * 🔒 **Security Group** is like a *door lock* on each **individual room (EC2)** — once someone enters, they’re allowed to exit freely.

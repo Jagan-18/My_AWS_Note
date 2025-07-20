@@ -1,6 +1,9 @@
 # AWS VPC
+---
+<img width="611" height="481" alt="Image" src="https://github.com/user-attachments/assets/95a9dbad-2783-427c-8910-1396fa491f21" />
 
-## 🔵 What is a VPC (Virtual Private Cloud)?
+---
+# 🔵 What is a VPC (Virtual Private Cloud)?
 1. A virtual private cloud is a virtual network that closely resembles a traditional networking that you operate in your own data centre, with the benefits of using the scalable infrastructure of AWS.
 2. VPC is a virtual network of data center inside AWS for one client.
 3. It is logically isolated from other virtual network in the AWS cloud.

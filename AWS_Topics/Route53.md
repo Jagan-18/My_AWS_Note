@@ -6,7 +6,8 @@
 2. The Internet’s DNS system works much like a phone book by managing the mapping between names and numbers. 
 3. DNS servers translate requests for names into IP addresses, controlling which server an end user will reach when they type a domain name into their web browser. These requests are called queries.
 
-<img>
+<img width="576" height="593" alt="Image" src="https://github.com/user-attachments/assets/083ca439-a9be-47c1-9ce3-d2ea606ba242" />
+
 ---
 # What is Route 53?
 1. You can use Route 53 in the Networking and Content Delivery section in AWS Console.
@@ -14,7 +15,7 @@
 3. It is a scalable (DNS) service that provides a reliable way to redirect traffic to applications. To achieve this domain names are translated to IP addresses to help computers connect better.
 4. It is possible to connect queries to entities like Elastic Load Balancers in AWS using Amazon Route 53.
 
-<img>
+<img width="787" height="413" alt="Image" src="https://github.com/user-attachments/assets/8ec6ef21-b441-4f65-94d6-0ed85a1e5d79" />
 
 #### Route 53 is mainly used for 3 purposes:-
 **1.DNS Registration:** - Your website or web application needs a name; Route 53 lets you register a name for the same.
@@ -30,8 +31,7 @@
 **6.	Scalability and Reliability:** Route 53 is designed to handle large volumes of DNS queries and offers high availability, ensuring that your DNS infrastructure is resilient and reliable.
 
 ---
-## 🧱 Core Components of Route 53
-
+## 🧱 Core Components of Route 53:
 | Component               | Description                                                               |
 | ----------------------- | ------------------------------------------------------------------------- |
 | **Domain Registration** | Buy/manage domain names directly from AWS.                                |
@@ -76,7 +76,6 @@
   * CloudWatch alarms
 
 ---
-
 ## ✅ Use Case Example
 🔸 **Website Hosted on EC2 with Load Balancer:**
 
@@ -138,7 +137,6 @@
 ---
 
 ### 🛡️ Advanced Features
-
 - **Route 53 Resolver**
   - Provides recursive DNS resolution for VPCs and hybrid environments.
 

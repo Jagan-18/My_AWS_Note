@@ -18,24 +18,29 @@ A Security Group (SG) acts as a **virtual firewall** for **EC2 instances** (and 
 - Scope of application: NACLs apply to all instances in a subnet.
 
 <img width="550" height="671" alt="Image" src="https://github.com/user-attachments/assets/b68ba4ba-9066-47ab-89c4-5734de678da6" />
+
 **Security group basically there two things **
 1.	Inbound Traffic.
 2.	Out bound Traffic.
    
 <img width="603" height="325" alt="Image" src="https://github.com/user-attachments/assets/a7e3269f-e010-4761-af58-5771342ced6f" />
 
+
 Inbound rules control the incoming traffic to your instance.
+
 **(OR)**
+
 Inbound traffic refers to any traffic coming to your network, regardless of source or method. If the incoming request originates from any outside organization or user, it’s considered inbound traffic.
+
 ---
 outbound rules control the outgoing traffic from your instance. When you launch an instance, you can specify one or more security groups.
 **(OR)**
 --------> Outbound traffic refers to traffic that originates from inside your own network. 
+
 # NACL’s
 NACL basically the primary purpose is you can deny what kind of traffic that you would want and to you can allow what kind of traffic you want.
 
 ---
-
 **Key Features:**
 * **Stateful:** If you allow inbound traffic, the outbound response is automatically allowed.
 * Applied to **ENIs (Elastic Network Interfaces)** — typically attached to EC2.

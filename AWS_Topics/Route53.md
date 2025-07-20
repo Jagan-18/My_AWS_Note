@@ -19,15 +19,22 @@
 
 #### Route 53 is mainly used for 3 purposes:-
 **1.DNS Registration:** - Your website or web application needs a name; Route 53 lets you register a name for the same.
+
 **2. Route Internet Traffic:**- Route 53 helps you connect with your website or web application when you search for your domain name on your browser.
+
 **3.Check Health Status:** - Route 53 sends automated request over internet to check the availability of your website or web application and sends you notification if it is unavailable so that you can route the requests to a healthy resource.
 
 #### It provides several key features:
 **1.	DNS Management:** Route 53 translates domain names (like www.example.com) into IP addresses (like 192.0.2.1), allowing users to access websites and services using human-readable names rather than numeric IP addresses.
+
 **2.	Domain Registration:** It allows users to register new domain names directly through the service or transfer existing ones from other registrars.
+
 **3.	Traffic Routing:** Route 53 supports various routing policies, including simple routing, weighted routing, latency-based routing, failover routing, and geolocation routing. These policies help manage how traffic is distributed across different endpoints.
+
 **4.	Health Checks:** It can perform health checks on resources to ensure that traffic is only routed to healthy endpoints.
+
 **5.	Integration with AWS Services:** Route 53 integrates seamlessly with other AWS services, such as Amazon S3, Amazon CloudFront, and Amazon EC2, making it easier to manage and route traffic to your AWS-hosted resources.
+
 **6.	Scalability and Reliability:** Route 53 is designed to handle large volumes of DNS queries and offers high availability, ensuring that your DNS infrastructure is resilient and reliable.
 
 ---

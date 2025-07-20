@@ -21,6 +21,7 @@ A Security Group (SG) acts as a **virtual firewall** for **EC2 instances** (and 
 **Security group basically there two things **
 1.	Inbound Traffic.
 2.	Out bound Traffic.
+   
 <img width="603" height="325" alt="Image" src="https://github.com/user-attachments/assets/a7e3269f-e010-4761-af58-5771342ced6f" />
 
 Inbound rules control the incoming traffic to your instance.

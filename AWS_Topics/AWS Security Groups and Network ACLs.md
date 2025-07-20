@@ -11,6 +11,7 @@ A Security Group (SG) acts as a **virtual firewall** for **EC2 instances** (and 
 - AWS Security is always a shared responsibility.
 
 <img width="927" height="398" alt="Image" src="https://github.com/user-attachments/assets/d1459297-69d6-41c7-968d-bf9701ff2325" />
+
 - Security Groups operate at the instance level and control traffic to and from individual EC2 instances.
 - Scope of application: Security Groups apply to individual instances.
 - NACLs operate at the subnet level and control traffic in and out of a VPC.

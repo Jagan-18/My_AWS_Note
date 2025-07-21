@@ -407,7 +407,81 @@ ssh -i your-key.pem ec2-user@your-public-ip
 2. **User Data:** User data is a script or data that can be **passed to an EC2 instance during launch.** It is often used to perform instance-specific configuration and customization.
 ---
 
+## 🔐 What is a **Bastion Host** (or Jump Host)?
+A **Bastion Host** (also called a **Jump Host**) is a **special-purpose instance** (usually an EC2) that **acts as a secure entry point** to access private resources (like private EC2 instances) in your AWS environment.
 
+### 💡 Why is it needed?
+Private EC2 instances **don’t have public IPs**, so you **can’t SSH into them directly** from the internet.
+A Bastion Host **sits in the public subnet**, allowing **controlled access** via SSH to your private servers.
+
+---
+## 🧱 Basic Architecture
+```
+Your PC (SSH)
+     |
+     v
+Public Internet
+     |
+     v
+[Bastion Host - Public Subnet] ← only this has Public IP
+     |
+     v
+[Private EC2 Instances - Private Subnet]
+```
+
+---
+
+## ✅ Use Case: 
+Suppose you deploy a **private web server** (in a private subnet) and want to SSH into it for updates/configurations.
+
+* You **SSH into the Bastion Host** (which has a public IP).
+* From the Bastion, you **SSH into the private EC2** using its private IP.
+
+---
+
+## 🔐 Security Best Practices:
+| Practice                              | Description                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| **Restrict SSH access**               | Only allow specific IPs to access the bastion (via Security Group)       |
+| **Use key pairs**                     | SSH into the bastion using private key                                   |
+| **Disable root login**                | Prevent direct root access                                               |
+| **Logging & Monitoring**              | Enable CloudWatch logs and AWS Systems Manager for auditing              |
+| **Multi-Factor Authentication (MFA)** | Add extra security layer using IAM or SSO                                |
+| **Use Session Manager (SSM)**         | As an alternative to bastion host (agent-based access with no public IP) |
+
+---
+
+## 🔄 Bastion Host vs. Jump Box
+
+They are essentially the **same** in function:
+| Term                   | Common Usage                                 |
+| ---------------------- | -------------------------------------------- |
+| **Bastion Host**       | Used in AWS/cloud & modern networking        |
+| **Jump Host/Jump Box** | Common in traditional or enterprise networks |
+
+---
+### 🧠 Key Comparison:
+| Feature              | Bastion Host                     | Jump Host                        |
+|----------------------|----------------------------------|----------------------------------|
+| Common Use           | Cloud environments (AWS, Azure)  | Traditional enterprise networks  |
+| Function             | Secure gateway to private subnet | Secure gateway to private subnet |
+| Security Focus       | Minimal services, hardened OS    | Controlled access, audit logging |
+| Terminology Origin   | Cloud & security architecture    | Network architecture             |
+
+---
+
+## ✅ Key Differences from Regular EC2:
+| Feature            | Bastion Host                 | Regular EC2                       |
+| ------------------ | ---------------------------- | --------------------------------- |
+| Public IP          | Yes (for SSH)                | Not always                        |
+| Purpose            | Gateway to private instances | App, DB, etc.                     |
+| Security Group     | Very restricted              | App-specific                      |
+| Direct User Access | Yes                          | Usually no (accessed via bastion) |
+
+---
+**💡 Tip:** Instead of using a Bastion Host, **AWS Systems Manager Session Manager** allows secure access **without public IPs or SSH ports**, which is a **more secure, modern solution**.
+
+---
 
 
 

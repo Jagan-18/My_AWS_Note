@@ -8,16 +8,16 @@
  - **Low latency and high throughput**
 
 **(OR)**
-- Amazon Simple Storage Service (Amazon S3) is a scalable object storage service designed to store and retrieve any amount of data from anywhere on the web. It's commonly used to store files, backups, images, videos, and more.
-- It looks similar to your Google drive/ one drive and also allow unlimited amount of data (Highly scalable – Up to 5TD per file).
+> Amazon Simple Storage Service (Amazon S3) is a scalable object storage service designed to store and retrieve any amount of data from anywhere on the web. It's commonly used to store files, backups, images, videos, and more.
+> It looks similar to your Google drive/ one drive and also allow unlimited amount of data (Highly scalable – Up to 5TD per file).
 
----s
+---
 # What are S3 buckets? / What can you store in these S3?
 1. S3 buckets are containers for storing objects (files, images, videos, and more.) in Amazon S3. Each bucket has a unique name globally across all of AWS. 
 2. You can think of an S3 bucket as a top-level folder that holds your data
 
 **OR**
->  An **S3 Bucket** is a **container for storing objects (files/data)**.
+> * An **S3 Bucket** is a **container for storing objects (files/data)**.
 > * All objects are stored **inside buckets**.
 > * Each bucket must have a **globally unique name**.
 > * Buckets live **within regions** (e.g., `us-east-1`), which determines **latency and data residency**.

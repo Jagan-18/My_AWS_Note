@@ -220,6 +220,7 @@ Amazon S3 access control lists (ACLs) enable you to manage access to buckets and
 ---
 ## cross-origin resource sharing (CORS):
 Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. With CORS support, you can build rich client-side web applications with Amazon S3 and selectively allow cross-origin access to your Amazon S3 resources.
+
 <img width="543" height="371" alt="Image" src="https://github.com/user-attachments/assets/31b5c3ac-7547-44d5-b5c0-1c82bb071abe" />
 
 ---

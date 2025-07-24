@@ -64,6 +64,7 @@
 | S3 One Zone-IA         | Same as above but 1 AZ only             | 99.5%      | 💸 Lower    |
 | Glacier                | Archival (minutes to hours retrieval)   | 11 9s      | 💲 Low      |
 | Glacier Deep Archive   | Archival (12+ hour retrieval)           | 11 9s      | 🪙 Cheapest |
+
 <img width="891" height="499" alt="Image" src="https://github.com/user-attachments/assets/2209c88a-7e4d-4167-abe1-77d26b9bbfde"
 
 ✅ **Versioning**

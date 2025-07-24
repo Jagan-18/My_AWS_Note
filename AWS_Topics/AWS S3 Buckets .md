@@ -64,6 +64,7 @@
 | S3 One Zone-IA         | Same as above but 1 AZ only             | 99.5%      | 💸 Lower    |
 | Glacier                | Archival (minutes to hours retrieval)   | 11 9s      | 💲 Low      |
 | Glacier Deep Archive   | Archival (12+ hour retrieval)           | 11 9s      | 🪙 Cheapest |
+<img width="891" height="499" alt="Image" src="https://github.com/user-attachments/assets/2209c88a-7e4d-4167-abe1-77d26b9bbfde"
 
 ✅ **Versioning**
 * Keep **multiple versions** of objects to protect from accidental deletes or overwrites.
@@ -149,7 +150,7 @@ To create an S3 bucket, you can use the
 ---
 # Advanced S3 Bucket Features:
 **S3 Storage Classes** S3 offers multiple storage classes, each designed for different use cases and performance requirements:
-<img>
+<img width="974" height="211" alt="Image" src="https://github.com/user-attachments/assets/9901216c-5c04-49f3-ba8a-20849cf7a4f6" />
 
 ---
 # 1. S3 Replication:
@@ -185,13 +186,12 @@ To create an S3 bucket, you can use the
 ## Life Cycle management In S3:
 1. An Amazon S3 Lifecycle rule configures predefined actions to perform on objects during their lifetime. You can create a lifecycle rule to optimize your objects storage costs throughout their lifetime.
 2. You can define the scope of the lifecycle rule to all objects in your bucket to objects with a shared prefix, certain object tags, or a certain object size.
-<img>
+<img width="876" height="303" alt="Image" src="https://github.com/user-attachments/assets/ffdab19a-c52b-4d22-9b87-ac0b61225282" />
 
 ---
 ## Access control list (ACL) overview:
 Amazon S3 access control lists (ACLs) enable you to manage access to buckets and objects. Each bucket and object has an ACL attached to it as a sub resource. It defines which AWS accounts or groups are granted access and the type of access. When a request is received against a resource, Amazon S3 checks the corresponding ACL to verify that the requester has the necessary access permissions.
-
-<img>
+<img width="660" height="292" alt="Image" src="https://github.com/user-attachments/assets/002f6db8-27e5-4d5d-990d-e842fdb39b8f" />
 
 ---
 ## Static website hosting in S3:
@@ -203,12 +203,12 @@ Amazon S3 access control lists (ACLs) enable you to manage access to buckets and
 2.	In technical terms, it is the process of converting human-readable plaintext to ciphertext.
 3.	In simpler terms, encryption takes readable data and alters it so that it appears random.
 4.	Encryption requires the use of a cryptographic key.
-<img>
+<img width="548" height="313" alt="Image" src="https://github.com/user-attachments/assets/db4aa39f-f59f-4f48-b27e-bd36026474bd" />
 
 ---
 ## cross-origin resource sharing (CORS):
 Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. With CORS support, you can build rich client-side web applications with Amazon S3 and selectively allow cross-origin access to your Amazon S3 resources.
-<img>
+<img width="543" height="371" alt="Image" src="https://github.com/user-attachments/assets/31b5c3ac-7547-44d5-b5c0-1c82bb071abe" />
 
 ---
 # How can you control access to objects in S3?

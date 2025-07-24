@@ -21,8 +21,7 @@
 > * All objects are stored **inside buckets**.
 > * Each bucket must have a **globally unique name**.
 > * Buckets live **within regions** (e.g., `us-east-1`), which determines **latency and data residency**.
-
-<img>
+<img width="471" height="230" alt="Image" src="https://github.com/user-attachments/assets/ab97695c-a435-4d2a-8144-7ed8dd67fee6" />
 
 #### 🧾 Object Basics:
 * **Object** = Data + Metadata + Key (name)

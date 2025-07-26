@@ -56,3 +56,66 @@ In this final step, we'll trigger the CI process by making a change to our GitHu
 - Head over to the AWS CodePipeline console and navigate to your pipeline.
 - You should see the pipeline automatically kick off as soon as it detects the changes in your repository.
 - Sit back and relax while AWS CodePipeline takes care of the rest. It will fetch the latest code, trigger the build process with AWS CodeBuild, and deploy the application if you configured the deployment stage.
+
+---
+
+## 🧰 What Is Systems Manager Parameter Store?
+AWS Systems Manager Parameter Store is a **centralized, secure storage** solution for configuration data and secrets such as:
+- API keys
+- Database passwords
+- License codes
+- Environment variables
+
+It supports **encryption using AWS Key Management Service (KMS)** and integrates with other AWS services like EC2, Lambda, and ECS.
+
+---
+
+## 🔐 How to Store Sensitive Data
+### ✅ Step-by-Step: Using SecureString Parameters
+
+1. **Open AWS Console → Systems Manager → Parameter Store**
+2. Click **“Create Parameter”**
+3. Fill in the details:
+   - **Name:** e.g., `/myapp/prod/db-password`
+   - **Type:** `SecureString`
+   - **Value:** Your sensitive data (e.g., password)
+   - **KMS Key:** Choose AWS-managed or your own customer-managed key
+
+4. Click **“Create Parameter”**
+
+This encrypts the value at rest using KMS and ensures secure access.
+---
+
+## 🛡️ Access Control
+- Use **IAM policies** to restrict access to specific parameters.
+- Example policy to allow access:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ssm:GetParameter",
+      "Resource": "arn:aws:ssm:region:account-id:parameter/myapp/prod/db-password"
+    }
+  ]
+}
+```
+
+---
+
+## 🔄 Retrieval Methods
+- **AWS CLI:**
+```bash
+aws ssm get-parameter --name "/myapp/prod/db-password" --with-decryption
+```
+
+- **AWS SDK (e.g., Python Boto3):**
+```python
+import boto3
+ssm = boto3.client('ssm')
+response = ssm.get_parameter(Name='/myapp/prod/db-password', WithDecryption=True)
+print(response['Parameter']['Value'])
+```
+
+---

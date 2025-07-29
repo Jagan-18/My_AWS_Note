@@ -7,7 +7,6 @@ AWS CloudWatch is a powerful monitoring and observability service provided by Am
 <img width="940" height="507" alt="Image" src="https://github.com/user-attachments/assets/ee14b250-7eb9-4e06-b0f6-b2feeba7a1ff" />
 
 ---
-
 ### 🎯 **Key Features of CloudWatch**
 | Feature                  | Description                                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------ |

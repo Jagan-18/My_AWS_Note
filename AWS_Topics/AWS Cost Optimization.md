@@ -9,7 +9,7 @@
 
 ---
 > # Strategies: Here are one-liner explanations for each of the AWS Cost Optimization strategies:
->1.	Reserved Instances (RIs): Commit to using EC2 instances for a 1- or 3-year term to reduce costs by up to 75%.
+> 1.	Reserved Instances (RIs): Commit to using EC2 instances for a 1- or 3-year term to reduce costs by up to 75%.
 > 2.	Spot Instances: Use spare EC2 capacity at a lower cost, ideal for batch processing, data processing, or other non-critical workloads.
 > 3.	Rightsizing: Match instance types and sizes to workload requirements, reducing costs by up to 50% and improving resource utilization.
 > 4.	Idle Resource Identification: Identify and terminate unused or idle resources, such as EC2 instances, RDS instances, or S3 buckets, to eliminate unnecessary costs.
@@ -109,12 +109,12 @@ They used AWS Instance Scheduler to stop instances after office hours.
 * However, **when deleting the EC2 instances and their associated volumes, it's easy to forget to delete the EBS snapshots.** This oversight can lead to unnecessary costs, as the snapshots continue to occupy storage space and incur costs.
 * To avoid these unnecessary costs, it's essential to **implement a process to automatically delete EBS snapshots when the associated EC2 instances and volumes are deleted.** This can be achieved through AWS services such as:
 
-1.	**AWS CloudFormation:** Use CloudFormation to manage infrastructure as code, including EC2 instances, volumes, and snapshots. This ensures that all resources are properly cleaned up when deleted.
+    1.	**AWS CloudFormation:** Use CloudFormation to manage infrastructure as code, including EC2 instances, volumes, and snapshots. This ensures that all resources are properly cleaned up when deleted.
 
-2.	**AWS Lambda:** Create a Lambda function that periodically checks for unused EBS snapshots and deletes them.
+   2. **AWS Lambda:** Create a Lambda function that periodically checks for unused EBS snapshots and deletes them.
 
-3.	**AWS CloudWatch:** Set up CloudWatch events to trigger a Lambda function or an AWS SDK call to delete snapshots when an EC2 instance is terminated.
-
+   3.  **AWS CloudWatch:** Set up CloudWatch events to trigger a Lambda function or an AWS SDK call to delete snapshots when an EC2 instance is terminated.
+ 
 * By implementing these strategies, you can avoid unnecessary costs associated with unused EBS snapshots and optimize your AWS storage costs.
 
 
@@ -238,5 +238,25 @@ The script requires the following IAM permissions:
 }
 ```
 ---
+# problem statement and description* suitable for an interview explanation:
 
+### **Problem Statement: AWS Cloud Cost Optimization – Identifying Stale Resources**
+
+**Focus Area: Identifying and Cleaning Up Stale EBS Snapshots**
+
+---
+### **Overview:**
+To optimize AWS cloud costs, it's important to identify and remove unused resources. One common overlooked area is EBS snapshots that are no longer associated with any active EC2 instance.
+
+### **Solution Description:**
+In this example, we implement an AWS Lambda function to automatically identify and delete stale EBS snapshots.
+
+* The Lambda function retrieves all EBS snapshots owned by the account (`self`).
+* It also fetches a list of all active EC2 instances (both running and stopped).
+* For each snapshot, it checks whether the associated EBS volume exists and if that volume is attached to any of the active EC2 instances.
+* If the snapshot is determined to be stale—meaning it is not linked to any volume or the volume is not attached to any EC2 instance—it is deleted.
+
+This automated cleanup helps in reducing unnecessary storage costs and maintaining a clean and efficient cloud environment.
+
+---
 

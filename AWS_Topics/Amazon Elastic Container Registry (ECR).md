@@ -14,7 +14,7 @@
 | **Image Tag**        | Version label (e.g., `latest`, `v1.0`) for each container image |
 | **Lifecycle Policy** | Rule to automatically delete old/unused images                  |
 | **IAM Permissions**  | Control access to push/pull images securely                     |
----
+
 # Key Benefits of ECR:
 1.	**Security:** ECR offers encryption at rest, and images are stored in private repositories by default, ensuring the security of your container images.
 2.	**Integration:** ECR integrates smoothly with AWS services like ECS and EKS, simplifying the deployment process.
@@ -33,7 +33,6 @@
 ---
 
 ## 🚀 **Step-by-Step: Create & Push Docker Image to ECR**
-
 ### 🔹 Step 1: Create a Repository in ECR
 
 ```bash
@@ -41,26 +40,22 @@ aws ecr create-repository --repository-name my-app --region us-east-1
 ```
 
 ### 🔹 Step 2: Authenticate Docker with ECR
-
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <your_account_id>.dkr.ecr.us-east-1.amazonaws.com
 ```
 
 ### 🔹 Step 3: Build and Tag Docker Image
-
 ```bash
 docker build -t my-app .
 docker tag my-app:latest <your_account_id>.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 ```
 
 ### 🔹 Step 4: Push the Image to ECR
-
 ```bash
 docker push <your_account_id>.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 ```
 
 ### 🔹 Step 5: Use Image in ECS or EKS
-
 In your ECS Task Definition or Kubernetes Deployment YAML, use the image URL:
 
 ```
@@ -81,17 +76,15 @@ In your ECS Task Definition or Kubernetes Deployment YAML, use the image URL:
 | List images in repo | `aws ecr list-images --repository-name my-app`                                    |
 | Delete image        | `aws ecr batch-delete-image --repository-name my-app --image-ids imageTag=latest` |
 | Set lifecycle rule  | Use `put-lifecycle-policy` or Console UI                                          |
----
 
 ## 🧪 Example Use Case
 * You build a Docker image with your app.
 * Push it to ECR.
 * Deploy it with ECS Fargate (serverless containers).
 * Monitor image scans and automate cleanup with lifecycle policies.
+
 ---
-
 ## 📌 Bonus: Enable Image Scanning
-
 ```bash
 aws ecr put-image-scanning-configuration \
     --repository-name my-app \
@@ -100,14 +93,15 @@ aws ecr put-image-scanning-configuration \
 ---
 # What is different Between ECR and Docker Hub or other container registers?
 **1. Integration:**
-   * •	ECR: Tightly integrated with AWS services, such as Amazon ECS, Amazon EKS, and AWS Lambda.
-   * •	Docker Hub: Standalone registry that can be used with various container orchestration tools and services.
+   * **ECR:** Tightly integrated with AWS services, such as Amazon ECS, Amazon EKS, and AWS Lambda.
+   * **Docker Hub:** Standalone registry that can be used with various container orchestration tools and services.
+
 **2. Security and Compliance:**
-   * •	ECR: Provides encryption at rest and in transit, image scanning, and vulnerability detection. Compliant with HIPAA, PCI-DSS, GDPR, and more.
-   * •	Docker Hub: Offers some security features, but not as comprehensive as ECR.
+   * **ECR:** Provides encryption at rest and in transit, image scanning, and vulnerability detection. Compliant with HIPAA, PCI-DSS, GDPR, and more.
+   * **Docker Hub:** Offers some security features, but not as comprehensive as ECR.
 **3. Pricing:**
-   * • ECR: Pricing based on the number of images stored and data transferred.
-   * • Docker Hub: Free
+   * **ECR:** Pricing based on the number of images stored and data transferred.
+   * **Docker Hub:** Free
 ---
 ## 🧭 **ECR vs Docker Hub vs Other Registries**
 | Feature                         | **Amazon ECR** 🟢                                         | **Docker Hub** 🔵                          | **Other Registries** (e.g., GHCR, Quay)   |
@@ -123,23 +117,30 @@ aws ecr put-image-scanning-configuration \
 | **Lifecycle Policies**          | ✅ Built-in support                                        | ❌ Manual cleanup                         | Depends on registry                       |
 | **CLI Integration**             | Tight with `aws ecr` and AWS CLI                           | `docker` CLI                               | Depends on provider (ghcr, quayctl, etc.) |
 | **SLA and Support**             | Backed by AWS support (SLA-driven)                         | Limited free support                       | Varies (some with SLA, others community)  |
----
+
 ### 🔍 **When to Use ECR**
 ✅ You're deploying containers using **AWS ECS, EKS, or Lambda**
+
 ✅ You need **fine-grained access control via IAM**
+
 ✅ You want to manage lifecycle, scanning, and cost within **AWS ecosystem**
+
 ✅ You require **region-specific performance** and **private networking (VPC endpoints)**
 
 ---
 ### 🔍 **When to Use Docker Hub or Others**
 ✅ You're running containers **locally or on multiple cloud platforms**
+
 ✅ You need **public image distribution** (e.g., for open-source)
+
 ✅ You already use **GitHub or GitLab** and prefer integrated registries (GHCR or GitLab Registry)
 
 ---
 # What container Registry are using?
 1. I’m familiar with **Amazon Elastic Container Registry (ECR)**, which is a fully managed container registry service provided by AWS.
+
 2. In my previous projects, I’ve used ECR to **store and manage container images**, especially in deployments using **Amazon ECS and EKS**.
+
 3. ECR offers a **secure, scalable, and tightly integrated** solution within the AWS ecosystem. I’ve worked with ECR to **push and pull container images**, and I’ve leveraged features like **image scanning and vulnerability detection** to ensure the security of my containerized applications.
 
 ---
@@ -185,7 +186,6 @@ Resources:
 
 ➡️ **Push to ECR** would still need to be done via external script (e.g., in CodeBuild, shell, or pipeline step).
 ---
-
 ### 🔍 **So which to choose?**
 | Criteria                    | Choose Terraform               | Choose CloudFormation       |
 | --------------------------- | ------------------------------ | --------------------------- |
@@ -206,6 +206,5 @@ Resources:
 > * You're in an **AWS-only shop**
 > * Your team is already using it
 > * You’re using **CodePipeline/CodeBuild** and need tight AWS integration
-
 ---
 

@@ -24,6 +24,7 @@
 
 ---
 ## ⚙️ **ECR Workflow: From Local to Cloud**
+
 1. **Build** a Docker image locally
 2. **Tag** the image with your ECR repo URL
 3. **Authenticate** Docker to AWS ECR

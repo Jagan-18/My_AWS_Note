@@ -193,8 +193,91 @@ my-app/
 ├── buildspec.yml
 ```
 
----
+# AWS ECS architecture/structure
+## 🧩 **AWS ECS Structure (Component Hierarchy)**
 
+Think of ECS as layers — from top-level grouping down to individual containers:
+
+```
+ECS Cluster
+   ├── ECS Service (optional, for long-running tasks)
+   │      ├── Tasks (running copies of a task definition)
+   │      │      └── Containers (Docker images)
+   │
+   └── Standalone Tasks (without service)
+```
+---
+### 1️⃣ **Cluster**
+* **Definition**: A **logical grouping** of resources (either EC2 instances or Fargate tasks) where ECS places your containers.
+* **Type**:
+
+  * **Fargate Cluster** → No servers to manage (serverless)
+  * **EC2 Cluster** → Uses ECS-optimized EC2 instances
+* **Role**: The “environment” where everything runs.
+
+---
+### 2️⃣ **Task Definition**
+* **Definition**: A **blueprint** for running containers in ECS.
+* **Contents**:
+
+  * Container images (from ECR, Docker Hub, etc.)
+  * CPU & memory allocations
+  * Networking mode (awsvpc, bridge, host)
+  * Logging configuration (CloudWatch logs)
+  * Environment variables & secrets
+  * Volumes/storage mappings
+---
+### 3️⃣ **Task**
+* **Definition**: A **running instance** of a task definition.
+* **Role**: Actual containerized workload running in ECS.
+* Can be run:
+
+  * As part of a **Service**
+  * As a **Standalone task** (one-off jobs, batch processing)
+---
+### 4️⃣ **Service**
+* **Definition**: A resource that ensures the **desired number of tasks** are running at all times.
+* **Features**:
+  * Auto scaling (up/down based on CPU, memory, or custom metrics)
+  * Integration with Load Balancers (ALB/NLB)
+  * Rolling updates (zero downtime deployments)
+---
+### 5️⃣ **Container**
+* **Definition**: The actual **Docker container** running inside ECS, based on the image you specified.
+* **Example**: Your app, microservice, API server, etc.
+---
+### 6️⃣ **Launch Types**
+* **Fargate**: Serverless — AWS provisions compute
+* **EC2**: You manage EC2 instances in the cluster
+---
+### 7️⃣ **Supporting Components**
+* **ECR** → Container image storage
+* **IAM Roles** → Access control for ECS tasks/services
+* **CloudWatch** → Monitoring & logging
+* **VPC/Subnets/Security Groups** → Networking & security
+
+---
+## 📊 **ECS Structure Diagram**
+```
++-----------------------------------------------------+
+|                   ECS Cluster                       |
+|  +-----------------------------------------------+  |
+|  | ECS Service                                   |  |
+|  |   +---------------------------------------+   |  |
+|  |   | Task 1   -> Container(s)               |   |  
+|  |   | Task 2   -> Container(s)               |   |  
+|  |   +---------------------------------------+   |  
+|  +-----------------------------------------------+  |
+|                                                     |
+|  Standalone Task(s) -> Container(s)                 |
++-----------------------------------------------------+
+```
+---
+## 🧠 **Interview Tip**
+If asked “What is ECS structure?” you can answer:
+> *"ECS is organized into clusters, which contain services or standalone tasks. A service manages multiple running tasks based on a task definition, and each task runs one or more containers. The environment can run on Fargate (serverless) or EC2 (self-managed) launch types, with supporting integrations like IAM, CloudWatch, ECR, and VPC networking."*
+
+---
 ## 📜 **Step-by-Step Setup**
 
 ### 1️⃣ **Create an ECR Repository**

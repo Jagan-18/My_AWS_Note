@@ -187,6 +187,7 @@ Resources:
 ➡️ **Push to ECR** would still need to be done via external script (e.g., in CodeBuild, shell, or pipeline step).
 ---
 ### 🔍 **So which to choose?**
+
 | Criteria                    | Choose Terraform               | Choose CloudFormation       |
 | --------------------------- | ------------------------------ | --------------------------- |
 | Multi-cloud or modular IAC  | ✅ Yes                          | ❌ AWS only               |

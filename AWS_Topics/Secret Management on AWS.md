@@ -1,6 +1,6 @@
 # Secret Management on AWS
 
-## **Secret Management on AWS**
+## **Secret Management on AWS** 
 Managing sensitive information such as passwords, API keys, database credentials, and tokens securely is critical in cloud environments. AWS provides multiple services to store, retrieve, and manage secrets securely with encryption and access control.
 
 ---

@@ -96,10 +96,7 @@ It’s like having a **CCTV + compliance officer** for your AWS environment.
 
 ---
 
-
-Perfect 👍 Let me give you a **real DevOps workflow example** showing how AWS Config is used in actual projects.
-
----
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/f9a66c5a-4a17-4cce-90b5-39b8ba2b71ed" />
 
 # 🚀 **DevOps Workflow with AWS Config**
 

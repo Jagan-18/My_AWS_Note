@@ -99,19 +99,14 @@ It’s like having a **CCTV + compliance officer** for your AWS environment.
 <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/f9a66c5a-4a17-4cce-90b5-39b8ba2b71ed" />
 
 # 🚀 **DevOps Workflow with AWS Config**
-
 Imagine your company is deploying workloads with **CI/CD pipelines (CodePipeline + Terraform/CloudFormation)**. You want to make sure every deployment stays **secure & compliant**.
 
 ---
-
 ## **Step 1 – CI/CD Deployment**
-
 * Developer commits code → CodePipeline runs.
 * Infrastructure is deployed using Terraform/CloudFormation.
 * Example: Creates **S3 bucket + EC2 instance + IAM roles**.
-
 ---
-
 ## **Step 2 – AWS Config Recording**
 
 * AWS Config is **enabled** in the account.
@@ -122,9 +117,7 @@ Imagine your company is deploying workloads with **CI/CD pipelines (CodePipeline
   * IAM role policies.
 
 ---
-
 ## **Step 3 – Compliance Evaluation**
-
 AWS Config runs **rules** (Managed or Custom):
 
 * ✅ `s3-bucket-server-side-encryption-enabled` → Ensures all buckets have encryption.
@@ -135,33 +128,25 @@ If resources **pass**, they’re marked **COMPLIANT**.
 If they **fail**, they’re marked **NON-COMPLIANT**.
 
 ---
-
 ## **Step 4 – Alerting**
-
 * Non-compliance triggers **CloudWatch Event → SNS notification → Slack/Email**.
 * Example: “🚨 S3 Bucket `my-app-logs` is PUBLIC!”
 
 ---
-
 ## **Step 5 – Auto-Remediation (Optional)**
-
 AWS Config can trigger **SSM Automation Documents** to **fix issues automatically**.
 
 * If S3 bucket is public → Remove public access block.
 * If EBS volume is unencrypted → Snapshot → create encrypted copy → replace.
 
 ---
-
 ## **Step 6 – Auditing & Reporting**
-
 * Compliance dashboard in AWS Config shows **compliance score** (e.g., 92% compliant).
 * Reports sent to security/compliance team weekly.
 * For audits (e.g., PCI, HIPAA, ISO 27001), AWS Config provides **configuration history** + compliance evidence.
 
 ---
-
 ## **Example Workflow in Action**
-
 👉 A developer creates a new S3 bucket `my-app-logs` **without encryption**.
 
 * AWS Config detects the change.
@@ -171,7 +156,6 @@ AWS Config can trigger **SSM Automation Documents** to **fix issues automaticall
 * Within minutes, the bucket is compliant again.
 
 ---
-
 ✅ **This is how DevOps teams actually use AWS Config in real projects:**
 
 * **Pipeline deploys infra → AWS Config evaluates → Auto-remediation + alerts → Audit evidence stored.**

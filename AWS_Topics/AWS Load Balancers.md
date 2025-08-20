@@ -5,6 +5,8 @@ It improves **availability, fault tolerance, and scalability**.
 
 ---
 ## **Types of AWS Load Balancers:**
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/bc45e502-7b50-4cb7-9aaa-890778567bc5" />
+
 1. **Application Load Balancer (ALB):**
 
    * Works at **Layer 7 (HTTP/HTTPS)**.

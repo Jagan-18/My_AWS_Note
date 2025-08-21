@@ -71,6 +71,7 @@ Migrating applications means moving an existing app from one environment to anot
   * CI/CD → CodePipeline
 ---
 ## **“How did you migrate your application onto the cloud?”** or about **Cloud Migration Strategies**, they are usually referring to the **“6 Rs of Cloud Migration”** (defined by AWS). 
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/2eba279c-22cf-4a11-871b-f6d071c54110" />
 
 ### **Cloud Migration Strategies (6 Rs):**
 

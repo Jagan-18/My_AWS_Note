@@ -85,3 +85,66 @@ User -> NLB (Layer 4) -> ECS Tasks (Containers)
 3. **Target Group** processes the request and sends the response back via the load balancer.
 
 ---
+# 👉 *“If someone sends a request, how does it flow through the seven layers of the OSI model?”*
+
+## **Answer: Flow of a Request Through the OSI 7 Layers**
+When a client (like a browser or mobile app) sends a request to a server (like a web app hosted on AWS), the request travels through the **OSI (Open Systems Interconnection) model**, which has **7 layers**:
+<img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/cfc72986-2ebb-4ef4-86ab-4290f69ee924" />
+
+### **Step-by-Step Flow:**
+1. **Application Layer (Layer 7)**
+
+   * User interacts with an app (e.g., typing a URL in a browser).
+   * Protocols: HTTP/HTTPS, FTP, DNS, SMTP.
+   * The request is generated here.
+
+2. **Presentation Layer (Layer 6)**
+
+   * Data gets translated into a standard format.
+   * Handles encryption (SSL/TLS) and compression.
+   * Example: HTTPS request encryption.
+
+3. **Session Layer (Layer 5)**
+
+   * Manages sessions between client and server.
+   * Ensures authentication, session establishment, and termination.
+   * Example: Login session to a website.
+
+4. **Transport Layer (Layer 4)**
+
+   * Breaks data into segments.
+   * Ensures reliable delivery using **TCP** (connection-oriented) or faster delivery using **UDP** (connectionless).
+   * Example: TCP handshake (SYN, SYN-ACK, ACK).
+
+5. **Network Layer (Layer 3)**
+
+   * Adds logical addressing (IP addresses).
+   * Determines the best route to the destination server.
+   * Protocol: **IP (IPv4/IPv6)**, routing handled here.
+
+6. **Data Link Layer (Layer 2)**
+
+   * Adds **MAC addresses** (physical addressing).
+   * Frames data for transmission over the physical network (LAN/Wi-Fi).
+   * Switches operate here.
+
+7. **Physical Layer (Layer 1)**
+
+   * Converts data into electrical/optical/radio signals.
+   * Physical transmission over cables, fiber optics, or wireless.
+   * Example: Ethernet cable or Wi-Fi signals.
+
+---
+### **Reverse Flow (Server Response)**
+When the server responds, the flow happens in **reverse order**:
+
+* Starts at **Layer 7 (Application)** on the server → goes down to Layer 1 (Physical).
+* Travels back over the network.
+* At the client, it moves **upward from Layer 1 → Layer 7** until the user sees the response (e.g., a webpage).
+---
+✅ **Short Summary (for interviews):**
+*A request starts at Layer 7 (Application) and travels down through the OSI layers until it becomes physical signals at Layer 1. On the receiving side, the process is reversed back up to Layer 7, where the application interprets the data.*
+
+---
+
+

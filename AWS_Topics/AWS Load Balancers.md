@@ -90,7 +90,6 @@ User -> NLB (Layer 4) -> ECS Tasks (Containers)
 ## **Answer: Flow of a Request Through the OSI 7 Layers**
 When a client (like a browser or mobile app) sends a request to a server (like a web app hosted on AWS), the request travels through the **OSI (Open Systems Interconnection) model**, which has **7 layers**:
 <img width="1024" height="1536" alt="Image" src="https://github.com/user-attachments/assets/cfc72986-2ebb-4ef4-86ab-4290f69ee924" />
-
 ### **Step-by-Step Flow:**
 1. **Application Layer (Layer 7)**
 

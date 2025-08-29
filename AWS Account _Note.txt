@@ -1,0 +1,121 @@
+AWS Cloud roadmaps should be simple.
+
+We make it complicated with roles.
+
+First cover the basics before you go advanced.
+
+Phase 1: Basic & General
+Phase 2: Basic & Specialized
+
+Evolve through these phases by learning and mastering:
+
+𝗣𝗵𝗮𝘀𝗲 𝟭: 𝗕𝗮𝘀𝗶𝗰 & 𝗚𝗲𝗻𝗲𝗿𝗮𝗹
+- ELB (Distribute incoming application traffic)
+- NACLs (Secure subnets with custom IP rules)
+- AWS Budgets (Manage cloud costs and usage)
+- Auto Scaling (Scale EC2 capacity automatically)
+- S3 Buckets and Objects (Store and retrieve data)
+- Internet Gateways (Connect VPCs to the internet)
+- EC2 Instances (Run applications on virtual servers)
+- Route Tables (Direct network traffic from your VPC)
+- Route 53 (Route end users to Internet applications)
+- Security Groups (Filter traffic to and from instances)
+- VPC (Provision a private, isolated section of the cloud)
+- CloudWatch (Monitor resources and applications in real-time)
+- Amazon RDS (Set up, operate, and scale a relational database)
+- AWS Global Infrastructure (Leverage global reach and availability)
+- High Availability Architectures (Design fault-tolerant applications)
+- IAM Policies (Securely control access to AWS services and resources)
+- IAM Users and Groups (Manage user access and security credentials)
+- Disaster Recovery Basics (Implement backup and recovery strategies)
+
+𝗣𝗵𝗮𝘀𝗲 𝟮: 𝗕𝗮𝘀𝗶𝗰 & 𝗦𝗽𝗲𝗰𝗶𝗮𝗹𝗶𝘇𝗲𝗱
+- Shield (Protect against DDoS attacks)
+- SQS (Decouple application components)
+- ELB (Optimize application load balancing)
+- ECS (Run containerized applications on AWS)
+- KMS (Create and manage cryptographic keys)
+- Route 53 (Manage DNS and health-checking for apps)
+- WAF (Protect web applications from common web exploits)
+- Lambda (Run code without provisioning or managing servers)
+- Elastic Beanstalk (Deploy and manage applications in the cloud)
+- Snow Family (Migrate data into and out of AWS with physical devices)
+- CloudFront (Deliver content with low latency and high transfer speeds)
+- API Gateway (Create, publish, maintain, monitor, and secure APIs at any scale)
+- Step Functions (Coordinate multiple AWS services into serverless workflows)
+- EKS (Deploy, manage, and scale containerized applications using Kubernetes)
+- SNS (Decouple and scale microservices, distributed systems, and serverless applications)
+- RDS (Enhance database performance with Read Replicas and Multi-AZ deployments)
+- S3 (Implement lifecycle rules and cross-region replication for data management)
+- Secrets Manager (Protect secrets needed to access your applications, services, and IT resources)
+
+
+
+
+**********************************************************
+AWS Learning Path
+=================
+
+Regions Availability Zones
+1. VPC
+Subnets
+Route tables
+Internet Gateway
+NAT Gateway
+2. Amazon Ec2.
+           How to lunch server and  differnet features of ec2 and loadbalancing Auto scaling Group , Security Group, key pairs..ect.
+S3 (Simple storage service)
+ RDS (Relational database Service)
+IAM (Identity And Access management)
+
+CICD Services that AWS provides
+-------------------------------
+1. Code Commit
+2.Code Building Service
+3.Code Deploy 
+4. Code Pipeline
+
+Networking Service in AWS
+------------------------
+1. VPC 
+2. Route 53
+    How to use Route 53 to register Domain name and create DNS records, set up health checks and failover routing policies.
+
+Database Services
+-----------------
+1.RDS
+2. DynamoDB
+3. ElastiCache
+Infrastructure As Code in Aws
+1. Cloud Formation
+2. Terraform
+
+
+Countainer Services in AWS
+---------------------------
+1.Docker 
+2.Kubernetes
+AWS
+ AWS ECR (Elastic Container Registry)
+ ECS (Elastic Container Service)
+ EKS (Elastic Kubernetes Service)
+
+Monitoring Services
+------------------
+1.Amazon Cloudwatch
+2.CloudTrail
+3.Metics
+4. Alarms
+5.Logs
+6.Dashboards.
+
+Automation Service Provided by AWS
+---------------------------------
+1.Lambda
+2.AWS Systems Manager
+3.Elastic Beanstalk
+
+Security Services In AWS
+---------------------------
+1.KMS (Key Management Service)
+2.Secrets Manager
